@@ -35,8 +35,8 @@ The project consists of two primary components:
 
 ### Clone the Repository
 ```shell script
-git clone https://github.com/your-repo/Tether010.git
-cd Tether010
+git clone https://github.com/aliahmednada/Tether101.git
+cd Tether101
 ```
 
 
