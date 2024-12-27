@@ -39,6 +39,28 @@ git clone https://github.com/your-repo/Tether010.git
 cd Tether010
 ```
 
+
+## Running the Bootstrap Node
+Before running the server or client, you need to set up a **HyperDHT Bootstrap Node**. This node facilitates communication between the client and server.
+### Steps to Set Up the Bootstrap Node
+1. **Install HyperDHT CLI**: Ensure you have the HyperDHT CLI installed globally. Run the following command:
+``` bash
+   npm install -g hyperdht
+```
+1. **Start the Bootstrap Node**: Execute the following command to start the node:
+``` bash
+   hyperdht --bootstrap --host 127.0.0.1 --port 30001
+```
+1. **Verify the Bootstrap Node**: If successful, you will see confirmation output such as:
+``` 
+   Bootstrap server listening on 127.0.0.1:30001
+```
+This process must remain running as both the server and client use the bootstrap node to discover and communicate with each other through the HyperDHT network.
+### Important Note
+- If you are running in a distributed environment, you can deploy the bootstrap node on a publicly accessible server. Replace `127.0.0.1` with the public IP/hostname and make sure port `30001` is open for communication.
+- Update the `bootstrap` property in the **server** and **client** configurations to point to the address of your bootstrap node.
+
+
 ### Install Dependencies
 ```shell script
 npm install
