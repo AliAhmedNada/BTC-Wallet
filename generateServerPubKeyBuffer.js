@@ -1,0 +1,1 @@
+  const serverPubKey = Buffer.from("<RPC_SERVER_PUBLIC_KEY>", "hex");
